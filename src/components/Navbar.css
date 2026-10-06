@@ -1,0 +1,445 @@
+/* ==========================================================================
+   NAVBAR COMPONENT (FIGS DUAL ARCHITECTURE CSS)
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  background-color: #121417;
+  color: #FFFFFF;
+  padding: 8px 0;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.announcement-text {
+  text-align: center;
+}
+
+.announcement-right {
+  position: absolute;
+  right: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.shipping-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #D1D5DB;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+@media (max-width: 900px) {
+  .announcement-right {
+    display: none;
+  }
+}
+
+/* Main Navbar */
+.main-navbar {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-primary);
+}
+
+.main-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Desktop Left Nav */
+.desktop-left-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex: 1;
+}
+
+.nav-gender-link {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-gender-link:hover,
+.nav-gender-link.active {
+  color: var(--text-primary);
+}
+
+.nav-gender-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+}
+
+.nav-divider {
+  width: 1px;
+  height: 16px;
+  background-color: var(--border-medium);
+  margin: 0 4px;
+}
+
+.nav-text-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.nav-text-link:hover {
+  color: var(--text-primary);
+}
+
+/* Brand Wordmark Logo */
+.brand-center-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.brand-wordmark-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-primary);
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  line-height: 1.05;
+}
+
+.brand-sub {
+  font-family: var(--font-heading);
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Desktop Right Utilities */
+.desktop-right-utilities {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  flex: 1;
+}
+
+.utility-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.utility-btn:hover {
+  background-color: var(--bg-secondary);
+}
+
+.bag-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: #121417;
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Specific Subbar (One-Touch Gender Tabs) */
+.mobile-subbar {
+  display: none;
+  border-top: 1px solid var(--border-light);
+  background-color: var(--bg-primary);
+}
+
+.mobile-gender-tabs {
+  display: flex;
+  width: 100%;
+}
+
+.mobile-tab {
+  flex: 1;
+  padding: 12px 0;
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+  border-bottom: 2px solid transparent;
+}
+
+.mobile-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-primary);
+  background-color: var(--bg-secondary);
+}
+
+.mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+/* Media Queries for Mobile Switching */
+@media (max-width: 900px) {
+  .desktop-left-nav {
+    display: none;
+  }
+  .desktop-only {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: flex;
+  }
+  .mobile-subbar {
+    display: block;
+  }
+  .brand-center-logo {
+    justify-content: center;
+  }
+  .brand-name {
+    font-size: 1.25rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+/* Mobile Drawer */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+}
+
+.mobile-menu-drawer {
+  width: 82%;
+  max-width: 340px;
+  height: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  animation: slideDrawer 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDrawer {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.mobile-drawer-header {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mobile-drawer-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.mobile-drawer-gender-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.drawer-gender-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.drawer-gender-btn.active {
+  background-color: #121417;
+  color: #FFFFFF;
+}
+
+.drawer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 16px;
+}
+
+.drawer-nav-item {
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.drawer-nav-item:hover {
+  color: var(--text-primary);
+}
+
+.mobile-drawer-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.drawer-guarantee {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.guarantee-icon {
+  color: #10B981;
+}
+
+/* Search Modal */
+.search-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(18, 20, 23, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.search-modal-box {
+  background-color: #FFFFFF;
+  width: 90%;
+  max-width: 640px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: fadeIn 0.2s ease;
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border-light);
+  gap: 12px;
+}
+
+.search-box-icon {
+  color: var(--text-muted);
+}
+
+.search-field {
+  flex: 1;
+  border: none;
+  font-family: inherit;
+  font-size: 1.05rem;
+  outline: none;
+  color: var(--text-primary);
+}
+
+.search-suggestions {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.suggestions-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.suggestion-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.suggestion-tags button {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.suggestion-tags button:hover {
+  background-color: #121417;
+  color: #FFFFFF;
+}

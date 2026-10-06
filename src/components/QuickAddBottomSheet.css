@@ -1,0 +1,236 @@
+/* ==========================================================================
+   QUICK ADD BOTTOM SHEET (MOBILE APP-LIKE PURCHASE FLOW)
+   ========================================================================== */
+
+.bottom-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(18, 20, 23, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bottom-sheet-card {
+  width: 100%;
+  max-width: 520px;
+  background-color: #FFFFFF;
+  border-radius: 20px 20px 0 0;
+  box-shadow: var(--shadow-sheet);
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.sheet-drag-handle {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #D1D5DB;
+  margin: 12px auto 6px auto;
+}
+
+.sheet-header {
+  padding: 14px 20px 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sheet-product-summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sheet-thumb-img {
+  width: 54px;
+  height: 68px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background-color: #F1F3F5;
+}
+
+.sheet-summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sheet-product-title {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sheet-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sheet-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sheet-color-badge {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sheet-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.sheet-close-btn:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.sheet-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sheet-option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sheet-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sheet-group-label {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+.sheet-fit-guide {
+  font-size: 0.72rem;
+  color: #10B981;
+  font-weight: 600;
+}
+
+.sheet-sizes-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.sheet-size-btn {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  background-color: #FFFFFF;
+  transition: all var(--transition-fast);
+}
+
+.sheet-size-btn:hover {
+  border-color: #121417;
+}
+
+.sheet-size-btn.active {
+  background-color: #121417;
+  color: #FFFFFF;
+  border-color: #121417;
+}
+
+.sheet-embroidery-box {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  border: 1px dashed var(--border-medium);
+}
+
+.sheet-embroidery-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.embroidery-free-tag {
+  background-color: #10B981;
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.embroidery-input-wrap {
+  margin-top: 10px;
+}
+
+.embroidery-input-field {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.sheet-guarantee-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.note-icon {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.sheet-footer {
+  padding: 16px 20px 24px 20px;
+  border-top: 1px solid var(--border-light);
+  background-color: #FFFFFF;
+}
+
+.sheet-confirm-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 0.88rem;
+  border-radius: var(--radius-sm);
+}

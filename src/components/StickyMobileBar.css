@@ -1,0 +1,89 @@
+/* ==========================================================================
+   STICKY MOBILE DOCK (THUMB ZONE BEST PRACTICES)
+   ========================================================================== */
+
+.sticky-mobile-dock {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-light);
+  padding: 8px 16px env(safe-area-inset-bottom, 12px) 16px;
+  z-index: 900;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.dock-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.dock-action-btn,
+.dock-cart-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+}
+
+.dock-bag-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dock-badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  background-color: #121417;
+  color: #FFFFFF;
+  font-size: 0.6rem;
+  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dock-primary-browse-btn {
+  flex: 1;
+  background-color: #121417;
+  color: #FFFFFF;
+  padding: 12px 18px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .sticky-mobile-dock {
+    display: block;
+  }
+}

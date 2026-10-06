@@ -1,0 +1,55 @@
+/* ==========================================================================
+   APP ROOT STYLES & TOAST NOTIFICATION
+   ========================================================================== */
+
+.cronos-store-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+/* Toast Notification */
+.cronos-toast-notification {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #121417;
+  color: #FFFFFF;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  z-index: 2000;
+  animation: slideToast 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast-icon {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+@keyframes slideToast {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .cronos-toast-notification {
+    bottom: 84px; /* Above the StickyMobileBar */
+    left: 16px;
+    right: 16px;
+    justify-content: center;
+  }
+}

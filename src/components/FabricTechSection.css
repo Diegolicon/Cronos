@@ -1,0 +1,220 @@
+/* ==========================================================================
+   FABRIC TECHNOLOGY SPOTLIGHT (FIGS FIONx EQUIVALENT)
+   ========================================================================== */
+
+.fabric-tech-section {
+  padding: 90px 0;
+  background-color: #F8F9FA;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.fabric-tech-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Left Visual Column */
+.tech-visual-col {
+  width: 100%;
+}
+
+.tech-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+  background-color: #121417;
+}
+
+.tech-macro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.tech-image-frame:hover .tech-macro-img {
+  transform: scale(1.04);
+}
+
+.tech-image-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(14, 16, 20, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.badge-pulse-ring {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #38BDF8;
+  animation: pulseDot 1.8s infinite;
+}
+
+.badge-tech-name {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Right Content Column */
+.tech-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.tech-content-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tech-eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.tech-headline {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.tech-lead-paragraph {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* 4 Pillars Grid */
+.tech-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 20px;
+}
+
+.tech-pillar-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.pillar-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-xs);
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #121417;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.pillar-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pillar-title {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pillar-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.48;
+}
+
+/* Specs Ribbon */
+.tech-specs-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  margin-top: 6px;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-item strong {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.spec-item span {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.spec-divider {
+  width: 1px;
+  height: 28px;
+  background-color: var(--border-medium);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .fabric-tech-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .tech-headline {
+    font-size: 1.8rem;
+  }
+
+  .tech-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .tech-specs-ribbon {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+}

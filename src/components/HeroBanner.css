@@ -1,0 +1,242 @@
+/* ==========================================================================
+   HERO BANNER (FIGS CAMPAIGN AESTHETIC)
+   ========================================================================== */
+
+.hero-banner-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-primary);
+}
+
+.hero-banner-viewport {
+  position: relative;
+  width: 100%;
+  height: 82vh;
+  min-height: 580px;
+  max-height: 760px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-media-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+/* Luxury Dark Gradient Scrim */
+.hero-overlay-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg, 
+    rgba(14, 16, 20, 0.78) 0%, 
+    rgba(14, 16, 20, 0.55) 45%, 
+    rgba(14, 16, 20, 0.15) 100%
+  );
+  z-index: 1;
+}
+
+.hero-content-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-editorial-box {
+  max-width: 580px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #FFFFFF;
+  width: fit-content;
+}
+
+.eyebrow-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10B981;
+  animation: pulseDot 1.8s infinite;
+}
+
+.hero-editorial-title {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.hero-editorial-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #E2E8F0;
+  max-width: 500px;
+}
+
+/* Dual CTAs */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-dual-btn {
+  padding: 15px 30px;
+  font-size: 0.82rem;
+}
+
+.hero-secondary-cta {
+  background-color: #FFFFFF;
+  color: #121417;
+  border-color: #FFFFFF;
+}
+
+.hero-secondary-cta:hover {
+  background-color: #F1F3F5;
+  color: #121417;
+}
+
+/* Value Ribbon */
+.hero-value-ribbon {
+  background-color: #F8F9FA;
+  border-bottom: 1px solid var(--border-light);
+  padding: 18px 0;
+}
+
+.ribbon-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ribbon-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ribbon-icon {
+  color: #1E293B;
+  flex-shrink: 0;
+}
+
+.ribbon-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ribbon-text strong {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.ribbon-text span {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.ribbon-divider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--border-medium);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .hero-banner-viewport {
+    height: 75vh;
+    min-height: 520px;
+    align-items: flex-end;
+    padding-bottom: 48px;
+  }
+
+  .hero-overlay-scrim {
+    background: linear-gradient(
+      180deg, 
+      rgba(14, 16, 20, 0.1) 0%, 
+      rgba(14, 16, 20, 0.45) 40%, 
+      rgba(14, 16, 20, 0.88) 100%
+    );
+  }
+
+  .hero-editorial-box {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .hero-editorial-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-editorial-desc {
+    font-size: 0.92rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-dual-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
+  .hero-value-ribbon {
+    overflow-x: auto;
+    padding: 14px 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ribbon-container {
+    flex-wrap: nowrap;
+    width: max-content;
+    padding: 0 16px;
+    gap: 24px;
+  }
+
+  .ribbon-divider {
+    display: block;
+  }
+}

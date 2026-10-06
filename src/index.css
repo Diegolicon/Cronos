@@ -1,0 +1,210 @@
+/* ==========================================================================
+   CRONOS WORKWEAR - DESIGN SYSTEM (FIGS AESTHETIC & ARCHITECTURE)
+   ========================================================================== */
+
+:root {
+  /* Color Tokens */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F6F7F9;
+  --bg-tertiary: #EEF0F3;
+  --bg-dark: #121417;
+  --bg-dark-subtle: #1C1F24;
+
+  --text-primary: #121417;
+  --text-secondary: #5A626E;
+  --text-muted: #8A92A0;
+  --text-light: #FFFFFF;
+
+  --border-light: #E5E8EB;
+  --border-medium: #D1D6DC;
+  --border-dark: #2B2F36;
+
+  --brand-orange: #FFB300;
+  --brand-magenta: #D4009F;
+  --brand-gradient: linear-gradient(135deg, #FFB300 0%, #D4009F 100%);
+  --accent-blue: #1E3A8A;
+  --badge-green: #10B981;
+
+  /* Product Swatch Colors */
+  --swatch-black: #111315;
+  --swatch-navy: #152238;
+  --swatch-titanium: #7A8595;
+  --swatch-solar: #E8CA65;
+
+  /* Typography */
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Radii */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.12);
+  --shadow-sheet: 0 -10px 40px rgba(0, 0, 0, 0.2);
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* Button Standards */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--text-primary);
+  color: #FFFFFF;
+  padding: 14px 28px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background-color: #2D323A;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  border: 1.5px solid var(--text-primary);
+  padding: 13px 26px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-secondary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F3F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4C9D0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9AA1AC;
+}
+
+/* Utility Badges */
+.badge-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.badge-core {
+  background-color: #E2E8F0;
+  color: #1E293B;
+}
+
+.badge-limited {
+  background-color: #FEF3C7;
+  color: #92400E;
+}
+
+.badge-bestseller {
+  background-color: #121417;
+  color: #FFFFFF;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
